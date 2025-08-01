@@ -57,9 +57,9 @@ dev = [
 deepl = "mt_provider_deepl.translator:DeepLTranslator"
 
 [project.urls]
-"Homepage" = "https://github.com/assystant/mt-provider-deepl"
-"Bug Reports" = "https://github.com/assystant/mt-provider-deepl/issues"
-"Source" = "https://github.com/assystant/mt-provider-deepl"
+"Homepage" = "https://github.com/assystant/mt_providers_deepl"
+"Bug Reports" = "https://github.com/assystant/mt_providers_deepl/issues"
+"Source" = "https://github.com/assystant/mt_providers_deepl"
 
 [tool.hatch.build.targets.wheel]
 packages = ["mt_provider_deepl"]

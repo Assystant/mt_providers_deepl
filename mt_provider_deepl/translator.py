@@ -64,7 +64,7 @@ class DeepLTranslator(BaseTranslationProvider):
         return {
             "Authorization": f"DeepL-Auth-Key {self.config.api_key}",
             "Content-Type": "application/json",
-            "User-Agent": "mt-provider-deepl/0.1.1"
+            "User-Agent": "mt_providers_deepl/0.1.1"
         }
         
     def _map_language_code(self, lang_code: str) -> str:

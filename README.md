@@ -40,8 +40,8 @@ pip install mt_provider_deepl
 ### Install for Development
 
 ```bash
-git clone https://github.com/assystant/mt-provider-deepl.git
-cd mt-provider-deepl
+git clone https://github.com/assystant/mt_providers_deepl.git
+cd mt_providers_deepl
 pip install -e ".[test,docs]"
 ```
 
@@ -493,8 +493,8 @@ async def get_languages():
 
 ```bash
 # Clone the repository
-git clone https://github.com/assystant/mt-provider-deepl.git
-cd mt-provider-deepl
+git clone https://github.com/assystant/mt_providers_deepl.git
+cd mt_providers_deepl
 
 # Create virtual environment
 python -m venv venv
@@ -561,7 +561,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - **Documentation**: [MT Providers Documentation](https://mt-providers.readthedocs.io/)
-- **Issues**: [GitHub Issues](https://github.com/assystant/mt-provider-deepl/issues)
+- **Issues**: [GitHub Issues](https://github.com/assystant/mt_providers_deepl/issues)
 - **DeepL API**: [DeepL API Documentation](https://www.deepl.com/docs-api)
 
 ## Changelog

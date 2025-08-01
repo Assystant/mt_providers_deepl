@@ -29,8 +29,8 @@ This project adheres to a code of conduct. By participating, you are expected to
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/mt-provider-deepl.git
-   cd mt-provider-deepl
+   git clone https://github.com/YOUR_USERNAME/mt_providers_deepl.git
+   cd mt_providers_deepl
    ```
 
 2. **Create Virtual Environment**
