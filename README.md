@@ -1,7 +1,7 @@
 # DeepL Translator Provider
 
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](tests/)
-[![Version](https://img.shields.io/badge/version-0.1.1-blue)](pyproject.toml)
+[![Version](https://img.shields.io/badge/version-0.1.2-blue)](pyproject.toml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 

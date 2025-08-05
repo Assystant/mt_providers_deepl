@@ -90,6 +90,6 @@ Versions follow SemVer format: MAJOR.MINOR.PATCH
 3. Add release date
 4. Create new **Unreleased** section
 5. Commit changes
-6. Create git tag: `git tag -a v0.1.1 -m "Release v0.1.1"`
+6. Create git tag: `git tag -a v0.1.2 -m "Release v0.1.2"`
 7. Push with tags: `git push origin main --tags`
 8. Publish to PyPI: `python -m build && python -m twine upload dist/*`
