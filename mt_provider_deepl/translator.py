@@ -122,7 +122,7 @@ class DeepLTranslator(BaseTranslationProvider):
         # Check if we have a specific mapping
         if lang_code in supported_language_map:
             return supported_language_map[lang_code]
-        raise ValueError('Unsupported Language')
+        raise ValueError(f'Unsupported Language: {lang_code}')
 
     def translate(
         self, text: str, source_lang: str, target_lang: str
@@ -183,6 +183,15 @@ class DeepLTranslator(BaseTranslationProvider):
                 }
             )
 
+        except deepl.QuotaExceededException as e:
+            logger.error(f"DeepL quota exceeded: {str(e)}")
+            return self._create_response(
+                translated_text="",
+                source_lang=source_lang,
+                target_lang=target_lang,
+                char_count=len(text),
+                error="DeepL quota exceeded for this billing period"
+            )
         except deepl.DeepLException as e:
             logger.error(f"DeepL API error: {str(e)}")
             return self._create_response(
@@ -276,6 +285,18 @@ class DeepLTranslator(BaseTranslationProvider):
                     
             return responses
             
+        except deepl.QuotaExceededException as e:
+            logger.error(f"DeepL quota exceeded: {str(e)}")
+            return [
+                self._create_response(
+                    translated_text="",
+                    source_lang=source_lang,
+                    target_lang=target_lang,
+                    char_count=len(text),
+                    error="DeepL quota exceeded for this billing period"
+                )
+                for text in texts
+            ]
         except deepl.DeepLException as e:
             logger.error(f"DeepL bulk translation error: {str(e)}")
             return [
