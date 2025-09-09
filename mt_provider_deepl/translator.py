@@ -20,7 +20,7 @@ class DeepLTranslator(BaseTranslationProvider):
     name = "deepl"
     requires_region = False  # DeepL doesn't require region
     supports_async = True
-    min_supported_version = "0.1.7"
+    min_supported_version = "0.1.8"
     max_chunk_size = 30000  # DeepL's character limit per request
 
     def __init__(self, config: TranslationConfig) -> None:
@@ -64,13 +64,14 @@ class DeepLTranslator(BaseTranslationProvider):
         return {
             "Authorization": f"DeepL-Auth-Key {self.config.api_key}",
             "Content-Type": "application/json",
-            "User-Agent": "mt_providers_deepl/0.1.2"
+            "User-Agent": self.get_user_agent()  # Uses base class method
         }
 
     def _get_root_lang_code(self, lang_code: str) -> str:
         if '-' in lang_code:
             return lang_code.split('-')[0].lower()
         return lang_code
+
 
     def _map_language_code(self, lang_code: str) -> str:
         """Map language codes to DeepL format."""

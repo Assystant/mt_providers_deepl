@@ -17,7 +17,7 @@ class TestDeepLTranslatorInit:
         assert translator.config == deepl_config
         assert translator.name == "deepl"
         assert translator.supports_async is True
-        assert translator.min_supported_version == "0.1.7"
+        assert translator.min_supported_version == "0.1.8"
         assert translator.max_chunk_size == 30000
         assert translator.requires_region is False
 

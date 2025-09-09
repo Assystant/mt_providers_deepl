@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mt_provider_deepl"
-version = "0.1.2"
+version = "0.1.3"
 description = "DeepL Translator Extension for MT Providers Framework"
 readme = "README.md"
 authors = [
@@ -24,7 +24,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
-    "mt_providers>=0.1.7,<0.2.0",
+    "mt_providers>=0.1.8,<0.2.0",
     "requests>=2.25.0,<3.0.0",
     "aiohttp>=3.8.0",  # For async support
     "deepl>=1.12.0",   # Official DeepL Python SDK
